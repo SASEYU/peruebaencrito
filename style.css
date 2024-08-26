@@ -1,0 +1,524 @@
+
+:root {
+    --primary-font-size: 32px;
+    --secondary-font-size: 24px;
+    --tertiary-font-size: 16px;
+    --primary-line-height: 150%;
+    --primary-border-radius: 24px;
+    --primary-bg-color: #ffffff;
+    --secondary-bg-color: #FA0900;
+    --primary-text-color: #000;
+    --secondary-text-color: #0a3871;
+    --primary-btn-bg: transparent;
+    --primary-btn-border: 1px solid black;
+    --hover-bg-color: #ee887a;
+    --btn-width: 328px;
+    --btn-height: 67px;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: var(--primary-font-size);/*32px;*/
+    line-height: var(--primary-line-height);/*150%;*/
+    
+}
+
+
+body {
+    background: linear-gradient(to right, #ffffff, #FA0900);
+    color:  var(--primary-text-color)/* #000;*/
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 80px; 
+    width: 100%;
+    
+}
+
+header .logo {
+    position: absolute;
+    left: 20px;
+    width: 160px;
+    height: auto; 
+
+}
+
+header h1 {
+    font-size:  60px;
+    text-align: center;
+
+}
+
+main {
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 80px;
+}
+
+.text-area{
+    background: transparent;
+    border: none;
+    color: var(--primary-text-color);/*#000;*/
+    font-size: var(--primary-font-size); /*32px;*/
+    margin-top: 90px;
+    text-transform: lowercase;
+    height: 205px;
+}
+
+::placeholder{
+    color: var(--primary-text-color);/*#000;*/
+    font-size: var(--primary-font-size);/*32px;*/
+}
+
+.text-area:focus{
+    outline: none;
+}
+
+.mensaje{
+    background: var(--primary-bg-color);/*white;*/
+    background-image: url(./imagenes/encripta.png);
+    background-size: 200px;
+    background-position: top 30px center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: var(--primary-border-radius);/*24px;*/
+    font-size: 24px;
+    color: #0a3871;
+    margin-left: 130px;
+    padding-left: 24px;
+    position: fixed;
+    height: 520px;
+    width: 400px;
+    
+
+}
+
+.text-container h3{
+    font-size: var(--secondary-font-size);/*24px;*/
+    color: var(--secondary-text-color);/* #000;*/
+    margin-left: 220px;
+    margin-top: 270px;
+    position: absolute;
+    text-align: center;
+
+}
+
+.text-container p{
+    font-size: var(--tertiary-font-size);/*16px;*/
+    color: var(--primary-text-color);/*#000;*/
+    margin-left: 190px;
+    margin-top: 350px;
+    position: absolute;
+    text-align: center;
+
+
+}
+
+.mensaje:focus{
+    outline: none;
+}
+
+
+.buttons-container{
+    display: flex;
+    margin-top: 10px;
+}
+
+/*.btn-encriptar{
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 24px;
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+    height: 67px;
+    width: 328px;
+
+}*/
+
+.btn-encriptar, .btn-desencriptar {
+    background: var(--primary-btn-bg);
+    border: var(--primary-btn-border);
+    border-radius: var(--primary-border-radius);
+    color: red;
+    font-size: var(--tertiary-font-size);
+    cursor: pointer;
+    height: var(--btn-height);
+    width: var(--btn-width);
+}
+
+
+.btn-encriptar:hover, .btn-desencriptar:hover{
+    background-color: var(--hover-bg-color);/*#ee887a;*/
+
+}
+
+.btn-desencriptar{
+    /*background: transparent;
+    border: 1px solid black;
+    border-radius: 24px;
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+    height: 67px;*/
+    margin-left: 30px;
+   /* width: 328px;*/
+
+
+}
+
+.btn-copiar{
+    border: var(--primary-btn-border);/*1px solid black;*/
+    border-radius: var(--primary-border-radius);/*24px;*/
+    color: red;
+    font-size: var(--tertiary-font-size);/*16px;*/
+    cursor: pointer;
+    display: none;
+    height: var(--btn-height);/*67px;*/
+    margin-left: 165px;
+    margin-top: 411px;
+    position: absolute;
+    width: 336px;
+}
+.btn-copiar:hover{
+    background-color: #e8e4c3;
+}
+
+.alert{
+    margin-top: 70px;
+}
+.alerta{
+    color: #000;
+    font-size: 16px;
+    margin-top: 70px;
+}
+.alert-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    top: -3px;
+}
+
+
+footer p{
+    font-size: 12px;
+    margin: 0;
+    padding: 20px;
+    margin-top: 14px;
+}
+
+footer .icon-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+footer a{
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+}
+
+footer img{
+    height: 20px;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Header */
+
+    header h1 {
+        font-size: 50px;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Main section */
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .text-area {
+        width: 100%;
+        margin-top: 120px; /* Mantiene su ubicación */
+    }
+
+    .alert-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px; /* Ajusta la distancia respecto al textarea */
+    }
+
+    .buttons-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 20px; /* Debajo de la alerta */
+    }
+
+    .btn-encriptar, .btn-desencriptar {
+        width: 328px /* Ambos botones en una fila */
+    }
+
+    /* Segunda sección */
+
+    /* Segunda sección */
+/*.mensaje {
+    width: 343px;
+    height: 595px;
+    background-size: 50%;
+    background-image: none !important;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin: 60px auto 20px auto; /* Centra horizontalmente y mantiene los márgenes superior e inferior */
+    /*padding: 20px; /* Añade padding para que el texto no esté pegado a los bordes */
+    /*position: relative;
+    text-align: left; /* Alinea el texto a la izquierda */
+    /*box-sizing: border-box; /* Incluye el padding dentro del ancho y alto definidos */
+   /* padding-bottom: 70px; /* Espacio reservado para el botón *//*
+}
+
+.text-container {
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+}*/
+
+    .mensaje {
+        width: 688px;
+        margin-top: 60px;
+        height: 343px;
+        background-image: none !important;
+        background-size: 50%;
+        background-position: top center;
+        background-repeat: no repeat;
+        margin-bottom: 10px;
+        position: relative;
+        left: -63px;
+        padding-bottom: 70px;/*n*/
+        
+    }
+
+    .text-container {
+        text-align: center;
+        margin-top: 20px;
+        margin-left: 250px;
+    }
+
+    .sin-salto{
+        display: none;
+    }
+
+
+    .text-container h3 {
+        font-size: 24px;
+        margin: 20px 0 10px;
+        margin-top: -140px;
+        margin-left: -15px;
+    
+    
+    }
+
+    .text-container p {
+        font-size: 16px;
+        margin: 10px 0 20px;
+        margin-top: -100px;
+        margin-left: -35px;
+    
+    
+    }
+
+    .btn-copiar {
+        position: absolute;
+        bottom: -290px; /* Colocar el botón justo debajo del textarea */
+        left: 0;
+        right: 0;
+        margin: auto;
+       /* align-items: center;      
+        justify-content: center;
+        top: 320px;*/
+        width: 624px;/*o*/
+        /*margin-left: 98px;*/
+        height: 67px;
+    
+    }
+
+    /* Footer */
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    footer p {
+        margin: 0;
+        padding: 0;
+    }
+
+    footer .icon-links {
+        display: flex;
+        justify-content:flex-end;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* Header */
+
+    header h1 {
+        font-size: 40px;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Main section */
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        width: 375px;
+        height: 933px;
+    }
+
+    .text-area {
+        width: 100%;
+        margin-top: 120px;
+    }
+
+    .alert-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .buttons-container {
+        display: flex;
+        flex-direction: column; /* Botones uno debajo del otro */
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .btn-encriptar, .btn-desencriptar {
+        width: 343px;
+        height: 67px;
+        margin: 5px;
+        margin-bottom: 10px; /* Separación entre botones */
+    }
+
+ 
+
+    /* Segunda sección */
+    .mensaje {
+        width: 343px;
+        height: 595px;
+        background-size: 50%;
+        background-image: none !important;
+        background-position: top center;
+        background-repeat: no-repeat;
+        margin-bottom: 20px;
+        margin-top: 60px;
+        margin-left: -15px;
+        position: relative;
+        text-align: left;
+    
+        /*width: 100%;
+        height: auto; /* Permite ajustar la altura según el contenido */
+        /*margin-top: 20px;*/
+        padding-bottom: 70px; /* Espacio reservado para el botón */
+    }
+
+    .text-container {
+        
+        text-align: center;
+        margin-top: 10px;
+        width: 100%;
+        
+    }
+
+
+    .text-container h3 {
+        font-size: 24px;
+        margin: 20px 0 10px;
+        margin-top: -198px;
+        margin-left: 40px;
+    
+    
+    }
+
+    .text-container p {
+        font-size: 16px;
+        margin: 10px 0 20px;
+        margin-top: -120px;
+        margin-left: 8px;
+    }
+
+    .btn-copiar {
+        width: 279px;
+        height: 67px;
+        position: absolute;
+        top: 865px;
+        left: -46px;
+        align-items: center;
+        justify-content: center;
+        /*position: absolute;
+        bottom: 10px; /* Colocar el botón justo debajo del textarea */
+        /*left: 0;
+        right: 0;
+        margin: auto;*/
+        /*width: calc(100% - 40px); /* Asegura que el botón quede dentro del textarea */
+    }
+
+    /* Footer */
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        top: 400px;
+    }
+
+    footer p {
+        margin: 0;
+        padding: 0;
+    }
+
+    footer .icon-links {
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+    }
+}
+
+
